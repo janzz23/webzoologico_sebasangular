@@ -17,7 +17,13 @@ export class AnimalService {
   
 
   }
-  
+  newAnimal(data: any): Observable<any> {
+     return this.http.post<any>(
+     this.apiUri,
+     data,
+    {headers: this.httpOptions});
+     }
+    
 
 }
 
